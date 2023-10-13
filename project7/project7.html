@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive project</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            direction: ltr;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.cdnfonts.com/css/gotham-6?styles=103309,103313,103316,103319');
+
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@900&family=Poppins:wght@700&family=Raleway:wght@500;700;800;900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@700&family=Raleway:wght@500;700;800;900&display=swap');
+
+        /* @media only screen and (max-width: 480px) {
+            .body {
+                width: 430px;
+                height: 9576px;
+            }
+
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+            .body {
+                width: 1024px;
+                height: 7411px;
+            }
+        } */
+
+        /* @media only screen and (min-width: 769px) and (max-width: 1024px) { */
+
+        .body {
+            max-width: 1728px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center ; */
+            }
+        }
+
+        .hero {
+            display: flex;
+            /* width: 1728px; */
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 60px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center ; */
+            }
+        }
+
+        .navigationbar {
+            /* width: 100%; */
+            display: flex;
+            padding: 50px 100px 30px 100px;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            gap: 100px;
+
+            @media screen and (max-width: 480px) {
+                display: flex;
+                padding: 50px 22px 30px 22px;
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+            }
+
+        }
+
+        .logo {
+            display: flex;
+            width: 73px;
+            height: 27px;
+            /* align-items: center; */
+            gap: 5px;
+            /* margin: 50px 300px 30px 100px ; */
+        }
+
+        .logo h6 {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+
+        }
+
+        .options h6 {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Gotham', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -1px;
+            /* margin: 50px 100px 30px 287px; */
+
+        }
+
+
+        .navigationbar button {
+            display: none;
+
+            @media screen and (min-width: 481px) and (max-width: 1728px) {
+                width: 99px;
+                height: 40px;
+                color: #FFF;
+                display: flex;
+                padding: 12px 24px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background: var(--main-colors-gray-4, #292929);
+            }
+        }
+
+        .menu-mobile {
+            display: none;
+
+            @media screen and (max-width: 480px) {
+                display: flex;
+                justify-content: end;
+                content: "222";
+                flex-grow: 1;
+                width: 40px;
+                height: 40px;
+
+            }
+
+        }
+
+
+
+        .hero-discription {
+            /* width: 1528px; */
+            /* height: 777px; */
+            display: flex;
+            padding: 0px 100px;
+            align-items: center;
+            gap: 19px;
+            align-self: stretch;
+        }
+
+        .hero-left {
+            /* width: 820px; */
+            /* height: 695px; */
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .title {
+            /* width: 660px; */
+            /* height: 695px; */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 70px;
+        }
+
+        .top-title {
+            /* width: 660px;
+                height: 481px; */
+            display: flex;
+            flex-direction: column;
+            /* align-items: flex-start; */
+            gap: 18px;
+            /* width: fit-content; */
+        }
+
+        .top-title h5 {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Anton', sans-serif;
+            font-size: 145px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 90%;
+            letter-spacing: -17px;
+        }
+
+        .top-title h4 {
+            font-family: 'Anton', sans-serif;
+            font-size: 83px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 90%;
+            letter-spacing: -8.42px;
+            background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .buttom {
+            /* width: 660px; */
+            /* height: 144px; */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+            align-self: stretch;
+        }
+
+        .social-networks {
+            /* width: 660px; */
+            /* height: 52px; */
+            display: flex;
+            /* justify-content: space-between; */
+            gap: 55px;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .items {
+            display: flex;
+            padding: 6px;
+            align-items: flex-start;
+            /* gap: 10px; */
+            border-radius: 10px;
+            border: 1px solid var(--main-colors-gray-1, #E6E6E6);
+        }
+
+        .arrow-button {
+            width: 604px;
+            height: 20px;
+            display: flex;
+            padding: 16px 24px 16px 32px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+            background: var(--main-colors-gray-4, #292929);
+        }
+
+        .arrow-button h4 {
+            background: var(--main-colors-gray-4, #292929);
+            color: var(--White, #FFF);
+            font-family: "Gotham";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            /* letter-spacing: -1px; */
+        }
+
+        .arrow-down {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .portal {
+            width: 160px;
+            height: 160px;
+            fill: var(--main-colors-gray-4, #292929);
+
+            @media screen and (max-width: 768px) {
+                display: none;
+
+            }
+        }
+
+        .hero-right {
+            display: flex;
+            /* width: 693px; */
+            /* height: 777px; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-right img {
+            width: 693px;
+            height: 777px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+
+            }
+        }
+
+        .middle {
+            display: flex;
+            /* width: 1728px; */
+            padding: 0px 100px;
+            flex-direction: column;
+            align-items: center;
+            gap: 200px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center ; */
+            }
+        }
+
+        .statistics {
+            /* width: 1528px; */
+            margin-top: 86px;
+            display: flex;
+            padding: 82px 0px;
+            justify-content: flex-end;
+            align-items: center;
+            align-self: stretch;
+            border-radius: 29px;
+            border: 1px solid var(--main-colors-gray-10, #000);
+            background: var(--main-colors-green-05, #F6FFF6);
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center ; */
+            }
+        }
+
+        .discp {
+            display: flex;
+            padding: 0px 100px;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+                gap: 144px;
+            }
+        }
+
+        .jbs,
+        .figma,
+        .money {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 21px;
+        }
+
+        .dawn {
+            width: 80px;
+            height: 80px;
+            fill: var(--main-colors-green-7, #64C661);
+            stroke-width: 4px;
+            stroke: var(--main-colors-green-7, #64C661);
+            margin: 28px 25px;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+
+        .jbs h5,
+        .figma h5,
+        .money h5 {
+            color: var(--main-colors-green-7, #64C661);
+            text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 128px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 90%;
+            text-transform: uppercase;
+        }
+
+        .jbs h1,
+        .figma h1,
+        .money h1 {
+            color: var(--main-colors-green-7, #64C661);
+            text-align: center;
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 36px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .portfolio p {
+            color: var(--main-colors-gray-10, #000);
+            font-family: 'Anton', sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+
+        .sample {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+
+        .up,
+        .down {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .section {
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 23px;
+            border-radius: 10px;
+            border: 1px solid var(--main-colors-gray-10, #000);
+            background: var(--White, #FFF);
+        }
+
+        .section img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 21px;
+        }
+
+        .section button {
+            display: flex;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            align-self: stretch;
+            background: var(--main-colors-gray-4, #292929);
+            color: var(--White, #FFF);
+            font-family: 'Gotham', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -0.8px;
+            text-transform: capitalize;
+        }
+
+        .info p {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Gotham', sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -1.4px;
+        }
+
+        .label {
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .tags {
+            display: flex;
+            height: 24px;
+            padding: 4px 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border-radius: 12px;
+            border: 1px solid var(--main-colors-purple-3, #BE9FF6);
+            background: var(--main-colors-purple-1, #E9DFFC);
+            color: var(--main-colors-purple-6, #784DC7);
+            font-family: 'Gotham', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -0.7px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .skill p {
+            color: var(--main-colors-gray-10, #000);
+            font-family: 'Anton', sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+
+        .skill-discp {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            align-self: stretch;
+            /* @media screen and (max-width: 480px) { */
+            /* width: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            } */
+        }
+
+        .skill-up,
+        .skill-down {
+            display: flex;
+            /* width: 1531px; */
+            align-items: flex-start;
+            gap: 20px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .skill-section {
+            display: flex;
+            padding: 40px 50px 60px 40px;
+            align-items: center;
+            gap: 20px;
+            flex: 1 0 0;
+            border-radius: 10px;
+            border: 1px solid var(--main-colors-gray-15, #737373);
+            background: var(--White, #FFF);
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .graph {
+            width: 220px;
+            height: 220px;
+        }
+
+        /* .pic {
+            width: 220px;
+            height: 220px;
+            
+        } */
+
+        .graph p {
+            margin: -135px 0px 0px 77px;
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            flex: 1 0 0;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .text h1 {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+        }
+
+        .text h4 {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Gotham', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -1px;
+            align-self: stretch;
+        }
+
+        .unsplash {
+            display: flex;
+            /* position: relative; */
+            /* width: 1728px; */
+            /* height: 800px; */
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .unsplash img {
+            position: relative;
+            width: 1728px;
+            height: 800px;
+            flex-shrink: 0;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .unsplash-text {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            position: absolute;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .unsplash-text h5 {
+            color: var(--White, #FFF);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 105%;
+            letter-spacing: -2.4px;
+        }
+
+        .unsplash-text h3 {
+            /* width: 1094px; */
+            color: var(--White, #FFF);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 105%;
+            letter-spacing: -2.4px;
+
+            /* @media screen and (max-width: 480px) { */
+            /* width: 500px; */
+            /* display: flex; */
+            /* flex-direction: column;
+                align-items: center; */
+
+            /* } */
+        }
+
+        .shield {
+            width: 72px;
+            height: 86px;
+            fill: var(--White, #FFF);
+        }
+
+        .aboutMe {
+            width: 1541.25px;
+            height: 1612px;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: 480px) {
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .aboutMe p {
+            color: var(--main-colors-gray-4, #292929);
+            font-family: 'Anton', sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-transform: uppercase;
+        }
+
+        .first-sec,
+        .second-sec,
+        .third-sec {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .first-sec h1 {
+            /* width: 665px; */
+            color: var(--main-colors-gray-3, #464646);
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+            margin-left: 33px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+        }
+
+        .first-sec h1 small {
+            background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .first-sec img {
+            width: 746px;
+            height: 530px;
+            flex-shrink: 0;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            margin-left: 201px;
+            margin-right: -35px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 448px;
+                align-self: stretch;
+
+            }
+        }
+
+        .second-sec img {
+            width: 794px;
+            height: 531px;
+            flex-shrink: 0;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 448px;
+                align-self: stretch;
+
+            }
+        }
+
+        .second-sec h1 {
+            color: var(--main-colors-gray-3, #464646);
+            text-align: right;
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+            width: 665px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .second-sec h1 small {
+            background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .third-sec h1 {
+            color: var(--main-colors-gray-3, #464646);
+            font-family: 'Gotham', sans-serif, Black;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -1.8px;
+            width: 665px;
+            margin-left: 33px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .third-sec h1 small {
+            background: var(--Red_Orange, linear-gradient(90deg, #FA709A 0%, #FEE140 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .colombian {
+            background: linear-gradient(90deg, #FFE76A 6.02%, #65C8FF 7%, #65C8FF 14.18%, #65C8FF 20.09%, #F00 20.1%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .third-sec img {
+            width: 747px;
+            height: 551px;
+            flex-shrink: 0;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            margin-left: 201px;
+            margin-right: -35px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 448px;
+                align-self: stretch;
+
+            }
+        }
+
+        .footer {
+            display: flex;
+            /* width: 100vw; */
+            height: 236px;
+            padding-bottom: 47px;
+            flex-direction: column;
+            align-items: center;
+            gap: 51px;
+            background: var(--main-colors-gray-4, #292929);
+            margin-top: 300px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 200px;
+                display: inline-flex;
+                padding-bottom: 0px;
+                flex-direction: column;
+                align-items: center;
+                gap: 51px;
+                /* justify-content: center ; */
+            }
+        }
+
+        .appreciation {
+            position: absolute;
+            /* width: 1528px;
+            height: 180px; */
+            border-radius: 15px;
+            background: var(--main-colors-purple-4, #A87FF3);
+            margin-top: -56px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                width: 384px;
+                height: 112px;
+
+            }
+        }
+
+        .symbol1 {
+            margin: 55px 1378px 0px 0px;
+
+            @media screen and (max-width: 480px) {
+                display: none;
+
+            }
+        }
+
+        .symbol2 {
+            margin: -184px 0px 55px 1378px;
+
+            @media screen and (max-width: 480px) {
+                width: 82.8px;
+                height: 69px;
+
+            }
+        }
+
+        .appreciation-text {
+            position: absolute;
+            top: 0;
+            color: #FFF;
+            font-family: 'Gotham', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -1.1px;
+            padding-left: 210px;
+            padding-top: 55px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                position: absolute;
+                top: 0;
+                flex-direction: column;
+                align-items: center;
+                width: 267px;
+                color: #FFF;
+                font-family: 'Gotham', sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 100%;
+                /* 12px */
+                letter-spacing: -0.6px;
+                text-transform: capitalize;
+
+            }
+        }
+
+        .footer-last {
+            position: relative;
+            display: flex;
+            height: 90px;
+            padding: 0px 100px 30px 100px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--main-colors-gray-1, #E6E6E6);
+            margin-top: 135px;
+            gap: 1000px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                /* flex-direction: column; */
+                align-items: center;
+
+            }
+        }
+
+        .footer-logo {
+            display: flex;
+            width: 164.25px;
+            height: 60.75px;
+            align-items: center;
+            gap: 11.25px;
+            margin-bottom: -14px;
+
+            @media screen and (max-width: 480px) {
+                /* width: 500px; */
+                display: flex;
+                /* flex-direction: column; */
+                /* align-items: center; */
+                display: flex;
+                width: 123.188px;
+                height: 45.563px;
+                align-items: center;
+                gap: 8.438px;
+
+            }
+        }
+
+        .footer-logo p {
+            color: var(--White, #FFF);
+            font-family: 'Poppins', sans-serif;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+        }
+
+        .footer-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            @media screen and (max-width: 480px) {
+                width: 360px;
+                display: flex;
+                /* flex-direction: column; */
+                /* align-items: center; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+            }
+        }
+
+        .footer-options h6 {
+            color: var(--White, #FFF);
+            font-family: 'Gotham', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -1px;
+
+            /* @media screen and (max-width: 480px) {
+                
+            } */
+        }
+
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <nav class="navigationbar">
+            <div class="logo">
+                <svg width="27" height="27" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group 1">
+                        <path id="Vector"
+                            d="M20.3489 12.3703C19.9699 12.7516 19.6797 13.2118 19.4989 13.718C19.3181 14.2243 19.2512 14.7642 19.3029 15.2993L19.2849 15.2813C19.3381 15.9112 19.2531 16.545 19.036 17.1387C18.8189 17.7323 18.4749 18.2714 18.028 18.7184C17.581 19.1653 17.0419 19.5094 16.4482 19.7264C15.8546 19.9435 15.2207 20.0285 14.5909 19.9753L14.6089 19.9933C13.8555 19.9232 13.0988 20.0871 12.4419 20.4628C11.7851 20.8385 11.2601 21.4076 10.9386 22.0926C10.6171 22.7776 10.5146 23.545 10.6452 24.2904C10.7759 25.0357 11.1332 25.7226 11.6685 26.2574C12.2038 26.7922 12.891 27.1489 13.6364 27.2788C14.3819 27.4088 15.1492 27.3056 15.8339 26.9835C16.5186 26.6613 17.0872 26.1359 17.4623 25.4787C17.8374 24.8215 18.0007 24.0647 17.9299 23.3113L17.9489 23.3293C17.8957 22.6995 17.9806 22.0656 18.1977 21.4719C18.4148 20.8783 18.7589 20.3392 19.2058 19.8922C19.6528 19.4453 20.1919 19.1012 20.7855 18.8842C21.3792 18.6671 22.013 18.5821 22.6429 18.6353L22.6239 18.6173C23.2393 18.6726 23.8588 18.5717 24.4249 18.3239C24.9909 18.0761 25.4853 17.6894 25.8621 17.1997C26.2389 16.71 26.4861 16.133 26.5805 15.5224C26.675 14.9117 26.6138 14.2871 26.4026 13.7063C26.1914 13.1256 25.837 12.6076 25.3723 12.2003C24.9076 11.793 24.3476 11.5096 23.7442 11.3764C23.1408 11.2432 22.5135 11.2644 21.9205 11.4381C21.3275 11.6119 20.788 11.9325 20.3519 12.3703H20.3489Z"
+                            fill="#292929" />
+                        <path id="Vector_2"
+                            d="M12.9719 17.6353L12.9529 17.6173C13.4882 17.6712 14.0288 17.6055 14.5357 17.4249C15.0425 17.2443 15.5029 16.9534 15.8835 16.5731C16.264 16.1928 16.5554 15.7326 16.7363 15.2259C16.9173 14.7192 16.9834 14.1787 16.9299 13.6433L16.9489 13.6613C16.8957 13.0314 16.9807 12.3976 17.1977 11.8039C17.4148 11.2103 17.7589 10.6712 18.2058 10.2242C18.6528 9.77726 19.1919 9.43316 19.7855 9.21616C20.3792 8.99902 21.013 8.91409 21.6429 8.96726L21.6239 8.94926C22.3774 9.02006 23.1343 8.85662 23.7915 8.48136C24.4488 8.1061 24.9742 7.53723 25.2962 6.85236C25.6182 6.1675 25.7211 5.39997 25.5909 4.65446C25.4607 3.90895 25.1037 3.22177 24.5685 2.68663C24.0334 2.1515 23.3462 1.79446 22.6007 1.66424C21.8552 1.53401 21.0877 1.63692 20.4028 1.95894C19.7179 2.28095 19.1491 2.8064 18.7738 3.46361C18.3985 4.12081 18.2351 4.87778 18.3059 5.63126L18.2879 5.61226C18.3412 6.24215 18.2564 6.87609 18.0394 7.46981C17.8224 8.06353 17.4783 8.60272 17.0314 9.04976C16.5844 9.49666 16.0452 9.84076 15.4515 10.0578C14.8577 10.2748 14.2238 10.3596 13.5939 10.3063L13.6119 10.3253C13.0766 10.2714 12.5359 10.3371 12.0291 10.5177C11.5223 10.6982 11.0619 10.9892 10.6813 11.3695C10.3007 11.7498 10.0094 12.21 9.8284 12.7167C9.6475 13.2234 9.5814 13.7639 9.6349 14.2993L9.6169 14.2813C9.6699 14.9111 9.5848 15.5449 9.3677 16.1385C9.1505 16.732 8.8065 17.2711 8.3596 17.718C7.91266 18.1649 7.37362 18.5089 6.78006 18.7261C6.1865 18.9432 5.55271 19.0283 4.9229 18.9753L4.9409 18.9933C4.18742 18.9225 3.43045 19.0859 2.77324 19.4612C2.11604 19.8365 1.59059 20.4053 1.26858 21.0902C0.946563 21.7751 0.843643 22.5426 0.973873 23.2881C1.1041 24.0336 1.46114 24.7208 1.99627 25.2559C2.53141 25.7911 3.21859 26.1481 3.9641 26.2783C4.70961 26.4085 5.47714 26.3056 6.16201 25.9836C6.84687 25.6616 7.41574 25.1362 7.791 24.479C8.1663 23.8217 8.3297 23.0648 8.2589 22.3113L8.2779 22.3293C8.2247 21.6994 8.3097 21.0656 8.5268 20.4719C8.7438 19.8783 9.0879 19.3392 9.5348 18.8922C9.9818 18.4453 10.5209 18.1012 11.1145 17.8842C11.7082 17.6671 12.342 17.5821 12.9719 17.6353Z"
+                            fill="#292929" />
+                        <path id="Vector_3"
+                            d="M6.2699 15.628C6.64892 15.2468 6.9391 14.7866 7.11974 14.2803C7.30038 13.774 7.36702 13.234 7.3149 12.699L7.33389 12.717C7.28069 12.087 7.36565 11.4529 7.58286 10.8591C7.80007 10.2653 8.1443 9.72606 8.5915 9.27906C9.0387 8.83208 9.578 8.48809 10.1719 8.27114C10.7658 8.05418 11.3999 7.96948 12.0299 8.02296L12.0109 8.00496C12.7641 8.07553 13.5208 7.91204 14.1777 7.5368C14.8346 7.16157 15.3597 6.59284 15.6816 5.90819C16.0034 5.22353 16.1062 4.45628 15.976 3.71105C15.8458 2.96582 15.4888 2.2789 14.9539 1.74396C14.419 1.20902 13.732 0.852103 12.9868 0.721883C12.2416 0.591653 11.4743 0.694473 10.7897 1.01629C10.105 1.33811 9.5363 1.86328 9.1611 2.52018C8.7858 3.17708 8.6223 3.93374 8.6929 4.68696L8.6749 4.66896C8.7281 5.29881 8.6431 5.93268 8.426 6.52632C8.2089 7.11996 7.86492 7.65907 7.41796 8.10603C6.97101 8.55299 6.43189 8.89702 5.83825 9.11406C5.24461 9.33116 4.61075 9.41616 3.9809 9.36296L3.9989 9.38096C3.38347 9.32576 2.76406 9.42686 2.19808 9.67476C1.6321 9.92266 1.13785 10.3095 0.761139 10.7993C0.384429 11.289 0.137449 11.866 0.0430689 12.4766C-0.0513011 13.0873 0.0099889 13.7119 0.221259 14.2925C0.432529 14.8732 0.786959 15.3911 1.25169 15.7983C1.71642 16.2056 2.27642 16.4889 2.8798 16.6221C3.48317 16.7552 4.1104 16.7339 4.70337 16.5602C5.29633 16.3864 5.83583 16.0658 6.27189 15.628H6.2699Z"
+                            fill="#292929" />
+                    </g>
+                </svg>
+                <h6>tian</h6>
+            </div>
+            <div class="options">
+                <h6>Home</h6>
+                <h6>Portfolio</h6>
+                <h6>Skills</h6>
+                <h6>About Me</h6>
+            </div>
+            <!-- <div class="theme">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 15.8333C13.2217 15.8333 15.8334 13.2216 15.8334 9.99996C15.8334 6.7783 13.2217 4.16663 10 4.16663C6.77836 4.16663 4.16669 6.7783 4.16669 9.99996C4.16669 13.2216 6.77836 15.8333 10 15.8333Z"
+                        fill="#FFF194" />
+                    <path
+                        d="M9.99998 19.1334C9.54165 19.1334 9.16665 18.7917 9.16665 18.3334V18.2667C9.16665 17.8084 9.54165 17.4334 9.99998 17.4334C10.4583 17.4334 10.8333 17.8084 10.8333 18.2667C10.8333 18.725 10.4583 19.1334 9.99998 19.1334ZM15.95 16.7834C15.7333 16.7834 15.525 16.7 15.3583 16.5417L15.25 16.4334C14.925 16.1084 14.925 15.5834 15.25 15.2584C15.575 14.9334 16.1 14.9334 16.425 15.2584L16.5333 15.3667C16.8583 15.6917 16.8583 16.2167 16.5333 16.5417C16.375 16.7 16.1666 16.7834 15.95 16.7834ZM4.04998 16.7834C3.83331 16.7834 3.62498 16.7 3.45831 16.5417C3.13331 16.2167 3.13331 15.6917 3.45831 15.3667L3.56665 15.2584C3.89165 14.9334 4.41665 14.9334 4.74165 15.2584C5.06665 15.5834 5.06665 16.1084 4.74165 16.4334L4.63331 16.5417C4.47498 16.7 4.25831 16.7834 4.04998 16.7834ZM18.3333 10.8334H18.2666C17.8083 10.8334 17.4333 10.4584 17.4333 10C17.4333 9.54171 17.8083 9.16671 18.2666 9.16671C18.725 9.16671 19.1333 9.54171 19.1333 10C19.1333 10.4584 18.7916 10.8334 18.3333 10.8334ZM1.73331 10.8334H1.66665C1.20831 10.8334 0.833313 10.4584 0.833313 10C0.833313 9.54171 1.20831 9.16671 1.66665 9.16671C2.12498 9.16671 2.53331 9.54171 2.53331 10C2.53331 10.4584 2.19165 10.8334 1.73331 10.8334ZM15.8416 4.99171C15.625 4.99171 15.4166 4.90837 15.25 4.75004C14.925 4.42504 14.925 3.90004 15.25 3.57504L15.3583 3.46671C15.6833 3.14171 16.2083 3.14171 16.5333 3.46671C16.8583 3.79171 16.8583 4.31671 16.5333 4.64171L16.425 4.75004C16.2666 4.90837 16.0583 4.99171 15.8416 4.99171ZM4.15831 4.99171C3.94165 4.99171 3.73331 4.90837 3.56665 4.75004L3.45831 4.63337C3.13331 4.30837 3.13331 3.78337 3.45831 3.45837C3.78331 3.13337 4.30831 3.13337 4.63331 3.45837L4.74165 3.56671C5.06665 3.89171 5.06665 4.41671 4.74165 4.74171C4.58331 4.90837 4.36665 4.99171 4.15831 4.99171ZM9.99998 2.53337C9.54165 2.53337 9.16665 2.19171 9.16665 1.73337V1.66671C9.16665 1.20837 9.54165 0.833374 9.99998 0.833374C10.4583 0.833374 10.8333 1.20837 10.8333 1.66671C10.8333 2.12504 10.4583 2.53337 9.99998 2.53337Z"
+                        fill="#FFF194" />
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="12" fill="white" />
+                </svg>
+            </div> -->
+            <button>Botton</button>
+            <div class="menu-mobile">
+                <img src="../project7/Landing Light/menu.jpg" alt="">
+            </div>
+        </nav>
+        <div class="hero-discription">
+            <div class="hero-left">
+                <div class="title">
+                    <div class="top-title">
+                        <h5>PRODUCT DESIGNER</h5>
+                        <h4>CRISTIAN MUÑOZ</h4>
+                    </div>
+                    <div class="buttom">
+                        <div class="social-networks">
+                            <div class="items">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="instagram">
+                                        <path id="Vector"
+                                            d="M30.1408 7.58008C27.1008 7.67328 27.1016 12.0469 30.1408 12.1393C33.1808 12.0461 33.18 7.67248 30.1408 7.58008ZM20 10.2193C14.612 10.2193 10.2444 14.5985 10.2444 20.0005C10.7584 32.9753 29.2432 32.9717 29.7552 20.0005C29.7556 14.5985 25.3876 10.2193 20 10.2193ZM20 26.3497C16.5028 26.3497 13.6676 23.5069 13.6676 20.0005C14.0012 11.5785 26.0004 11.5805 26.3328 20.0005C26.3324 23.5073 23.4972 26.3497 20 26.3497Z"
+                                            fill="#292929" />
+                                        <path id="Vector_2"
+                                            d="M38.8832 12.1673C38.7424 5.50045 34.5008 1.25645 27.8324 1.11685C26.2312 0.962452 13.7696 0.959652 12.1672 1.11685C5.5004 1.25765 1.2564 5.49925 1.1168 12.1677C0.962405 13.7665 0.959205 26.2321 1.1168 27.8329C1.2412 34.4781 5.5212 38.7593 12.1672 38.8833C13.7684 39.0393 26.23 39.0393 27.8324 38.8833C29.8544 38.7909 31.2356 38.4697 32.444 38.0001C36.6788 36.3085 38.748 32.5457 38.8832 27.8325C39.0376 26.2313 39.0404 13.7697 38.8832 12.1673ZM27.6764 35.4637C26.1008 35.6141 13.9 35.6165 12.3232 35.4637C10.4712 35.3793 9.4652 35.0697 8.7956 34.8097C3.016 32.1289 4.808 26.7077 4.5356 19.2665C4.5416 17.5381 4.532 14.0521 4.536 12.3237C4.7668 7.17085 7.1936 4.78525 12.3232 4.53645C13.9008 4.38605 26.0984 4.38365 27.6764 4.53645C32.8308 4.76725 35.214 7.19405 35.4636 12.3233C35.5656 13.5549 35.6396 20.2781 35.4636 23.6805C35.6536 30.0709 35.3624 35.0889 27.6764 35.4637Z"
+                                            fill="#292929" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="items">
+                                <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Figma" clip-path="url(#clip0_794_121)">
+                                        <path id="Vector"
+                                            d="M13.9332 40.0003C17.6132 40.0003 20.5998 37.0137 20.5998 33.3337V26.667H13.9332C10.2532 26.667 7.26651 29.6537 7.26651 33.3337C7.26651 37.0137 10.2532 40.0003 13.9332 40.0003Z"
+                                            fill="#292929" />
+                                        <path id="Vector_2"
+                                            d="M7.26651 19.9997C7.26651 16.3197 10.2532 13.333 13.9332 13.333H20.5998V26.6663H13.9332C10.2532 26.6663 7.26651 23.6797 7.26651 19.9997Z"
+                                            fill="#292929" />
+                                        <path id="Vector_3"
+                                            d="M7.26651 6.66667C7.26651 2.98667 10.2532 0 13.9332 0H20.5998V13.3333H13.9332C10.2532 13.3333 7.26651 10.3467 7.26651 6.66667Z"
+                                            fill="#292929" />
+                                        <path id="Vector_4"
+                                            d="M20.5999 0H27.2665C30.9465 0 33.9332 2.98667 33.9332 6.66667C33.9332 10.3467 30.9465 13.3333 27.2665 13.3333H20.5999V0Z"
+                                            fill="#292929" />
+                                        <path id="Vector_5"
+                                            d="M33.9332 19.9997C33.9332 23.6797 30.9465 26.6663 27.2665 26.6663C23.5865 26.6663 20.5999 23.6797 20.5999 19.9997C20.5999 16.3197 23.5865 13.333 27.2665 13.333C30.9465 13.333 33.9332 16.3197 33.9332 19.9997Z"
+                                            fill="#292929" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_794_121">
+                                            <rect width="40" height="40" fill="white" transform="translate(0.600006)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="items">
+                                <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="linkedin">
+                                        <path id="Vector"
+                                            d="M36.3916 1.00535C30.5472 0.98895 8.99081 1.01655 4.00841 1.00535C2.45801 1.00535 1.20001 2.22495 1.20001 3.72695V36.2794C1.20001 37.7817 2.45801 39.0001 4.00841 39.0001H36.3916C37.9428 39.0001 39.2 37.7817 39.2 36.2789V3.72695C39.2 2.22495 37.9428 1.00535 36.3916 1.00535Z"
+                                            fill="#292929" />
+                                        <path id="Vector_2"
+                                            d="M21.5812 32.802C21.5812 32.802 21.5812 23.2508 21.5812 23.2504C21.5256 21.4952 22.5748 19.8572 24.686 19.7836C26.7432 19.7836 27.5664 21.352 27.5664 23.6516V32.8016H33.252V22.994C33.252 17.74 30.4472 15.2952 26.706 15.2952C23.6388 15.2952 22.2916 17.0092 21.5432 18.1768L21.5812 15.6968H15.8956C15.9696 17.3016 15.8952 32.802 15.8952 32.802H21.5812ZM12.748 25.3844V15.6964H7.06162V32.8016H12.7484C12.7472 31.0056 12.7504 27.1552 12.748 25.3844ZM9.90602 13.3616C11.8884 13.3616 13.1228 12.048 13.1228 10.4068C13.1064 6.44797 6.72122 6.49197 6.72642 10.4064C6.72202 12.0604 7.99042 13.382 9.90602 13.3616Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="items">
+                                <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="twitter">
+                                        <path id="Vector"
+                                            d="M39.3684 8.44863C38.0016 9.05583 36.5332 9.46423 34.992 9.64863C36.566 8.70583 37.7728 7.21343 38.3412 5.43383C36.87 6.30663 35.2392 6.94063 33.502 7.28343C32.1124 5.80223 30.1328 4.87663 27.9416 4.87663C23.0984 4.81183 19.3748 9.54343 20.5208 14.2306C14.1892 13.9134 8.57599 10.8798 4.81679 6.26903C2.76519 9.61463 3.92999 14.399 7.17519 16.4414C5.92679 16.4014 4.75119 16.0586 3.72439 15.4886C3.67679 19.2106 6.31719 22.353 9.83599 23.0542C8.75479 23.3558 7.50919 23.403 6.39519 23.1854C7.36519 26.2118 10.1788 28.4158 13.5124 28.477C10.4984 30.8854 6.27879 32.141 2.23199 31.6322C18.5048 41.647 36.494 28.5262 35.5652 12.3918C37.0544 11.3166 38.3472 9.97543 39.3684 8.44863Z"
+                                            fill="#292929" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="items">
+                                <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="telegram">
+                                        <path id="Vector"
+                                            d="M20.3906 3.33301C17.0942 3.33301 13.8719 4.31049 11.131 6.14185C8.39023 7.9732 6.25402 10.5762 4.99256 13.6216C3.7311 16.6671 3.40104 20.0182 4.04413 23.2512C4.68722 26.4842 6.27456 29.4539 8.60544 31.7848C10.9363 34.1157 13.906 35.703 17.139 36.3461C20.3721 36.9892 23.7232 36.6591 26.7686 35.3977C29.814 34.1362 32.417 32 34.2484 29.2592C36.0797 26.5184 37.0572 23.296 37.0572 19.9997C37.0574 17.8109 36.6264 15.6436 35.7889 13.6214C34.9514 11.5992 33.7237 9.76184 32.1761 8.21416C30.6284 6.66648 28.791 5.43883 26.7688 4.60131C24.7466 3.7638 22.5793 3.33283 20.3906 3.33301ZM25.6897 28.5871C25.6273 28.7427 25.5324 28.8831 25.4113 28.999C25.2903 29.1148 25.1458 29.2035 24.9877 29.259C24.8295 29.3144 24.6613 29.3355 24.4944 29.3206C24.3275 29.3058 24.1656 29.2554 24.0197 29.173L19.4953 25.6573L16.5914 28.3363C16.524 28.3861 16.4452 28.4182 16.3622 28.4295C16.2792 28.4408 16.1947 28.4311 16.1164 28.4012L16.6731 23.4205L16.6909 23.4346L16.7023 23.3363C16.7023 23.3363 24.844 15.9238 25.1756 15.6079C25.5114 15.2929 25.4006 15.2246 25.4006 15.2246C25.4197 14.8404 24.7981 15.2246 24.7981 15.2246L14.0106 22.1647L9.51807 20.6347C9.51807 20.6347 8.82807 20.3872 8.76307 19.843C8.69473 19.303 9.54055 19.0097 9.54055 19.0097L27.4022 11.9138C27.4022 11.9138 28.8706 11.2596 28.8706 12.343L25.6897 28.5871Z"
+                                            fill="black" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="items">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Medium Logo" clip-path="url(#clip0_794_138)">
+                                        <path id="Vector"
+                                            d="M21.25 20C21.25 25.8586 16.7641 30.625 11.25 30.625C5.73594 30.625 1.25 25.8586 1.25 20C1.25 14.1414 5.73594 9.375 11.25 9.375C16.7641 9.375 21.25 14.1414 21.25 20ZM28.75 10C27.8621 10 26.1876 10.4314 24.9494 13.3205C24.1759 15.1251 23.75 17.4974 23.75 20C23.75 22.5026 24.1759 24.8749 24.9494 26.6795C26.1876 29.5686 27.8621 30 28.75 30C29.6379 30 31.3124 29.5686 32.5506 26.6795C33.3241 24.8749 33.75 22.5026 33.75 20C33.75 17.4974 33.3241 15.1251 32.5506 13.3205C31.3124 10.4314 29.6379 10 28.75 10ZM37.5 10C37.1685 10 36.8506 10.1317 36.6161 10.3661C36.3817 10.6006 36.25 10.9185 36.25 11.25V28.75C36.25 29.0815 36.3817 29.3995 36.6161 29.6339C36.8505 29.8683 37.1685 30 37.5 30C37.8315 30 38.1495 29.8683 38.3839 29.6339C38.6183 29.3995 38.75 29.0815 38.75 28.75V11.25C38.75 10.9185 38.6183 10.6006 38.3839 10.3661C38.1494 10.1317 37.8315 10 37.5 10Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_794_138">
+                                            <rect width="40" height="40" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="arrow-button">
+                            <h4>
+                                Download Curriculum Vita</h4>
+                            </h4>
+                            <div class="arrow-down">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="vuesax/linear/arrow-down">
+                                        <g id="arrow-down">
+                                            <path id="Vector"
+                                                d="M10.5 18.3337C15.1024 18.3337 18.8334 14.6027 18.8334 10.0003C18.8334 5.39795 15.1024 1.66699 10.5 1.66699C5.89765 1.66699 2.16669 5.39795 2.16669 10.0003C2.16669 14.6027 5.89765 18.3337 10.5 18.3337Z"
+                                                stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path id="Vector_2" d="M10.5 7.08301V12.083" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path id="Vector_3" d="M8 10.417L10.5 12.917L13 10.417" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portal">
+                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="Portal" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M80 160C79.84 115.872 44.0844 80.1483 0 80.1483C44.1828 80.1483 80 44.2642 80 0C80.1593 44.1284 115.916 79.8517 160 79.8517C115.817 79.8517 80 115.736 80 160Z"
+                            fill="#292929" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="https://s3-alpha-sig.figma.com/img/8f88/b643/df3eeee5fd2041f0ef71b07e1231e491?Expires=1695600000&Signature=mywwnhNDr5g2~VnLPmJ93eGR1SQAs6Z7bru43Eo0VikkdDHhJJqbX-8-3ssCjccvzVIlDsJccm8RqPusO89zflvjHz0q3Q~Q-H1GacoA5NqNcIWjYxvfhsul5XmJnSNREbxYvP2QSmms3-fK35vJO33hDsMLq1SKYuxpUpSLtAb3neH4dMDI8fT8gtfekmB0WJeUqNZ7THKZZJvm3mhniZMX3ZQ2~zh08DgWD9dAa-tyP7jgPltCYawsIvzmyC38Wv6oJbm3aREDfb6YDXwHfclHDV66~zldkK5syRXMuRbDRS0ODTd6FBnm7g-EKKuCySBgwe6DlS-PO92ycXcz1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="statistics">
+            <div class="discp">
+                <div class="jbs">
+                    <h5>90%</h5>
+                    <h1>Job Success Score on Upwork</h1>
+                </div>
+                <div class="dawn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path
+                            d="M40 0L40.0077 39.9606L55.3074 3.04481L40.0223 39.9668L68.2842 11.7157L40.0332 39.9777L76.9552 24.6926L40.0394 39.9923L80 40L40.0394 40.0077L76.9552 55.3074L40.0332 40.0223L68.2842 68.2842L40.0223 40.0332L55.3074 76.9552L40.0077 40.0394L40 80L39.9923 40.0394L24.6926 76.9552L39.9777 40.0332L11.7157 68.2842L39.9668 40.0223L3.04481 55.3074L39.9606 40.0077L0 40L39.9606 39.9923L3.04481 24.6926L39.9668 39.9777L11.7157 11.7157L39.9777 39.9668L24.6926 3.04481L39.9923 39.9606L40 0Z"
+                            fill="#64C661" stroke="#64C661" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="figma">
+                    <h5>>25.000</h5>
+                    <h1>Duplicates on Figma Community</h1>
+                </div>
+                <div class="dawn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <path
+                            d="M40 0L40.0077 39.9606L55.3074 3.04481L40.0223 39.9668L68.2842 11.7157L40.0332 39.9777L76.9552 24.6926L40.0394 39.9923L80 40L40.0394 40.0077L76.9552 55.3074L40.0332 40.0223L68.2842 68.2842L40.0223 40.0332L55.3074 76.9552L40.0077 40.0394L40 80L39.9923 40.0394L24.6926 76.9552L39.9777 40.0332L11.7157 68.2842L39.9668 40.0223L3.04481 55.3074L39.9606 40.0077L0 40L39.9606 39.9923L3.04481 24.6926L39.9668 39.9777L11.7157 11.7157L39.9777 39.9668L24.6926 3.04481L39.9923 39.9606L40 0Z"
+                            fill="#64C661" stroke="#64C661" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="money">
+                    <h5>>2k</h5>
+                    <h1>In Finished Works</h1>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio">
+            <p>PORTFOLIO</p>
+            <div class="sample">
+                <div class="up">
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                    <div class="section">
+                        <img src="https://s3-alpha-sig.figma.com/img/5cd1/61e0/ea31398419fd2d7b1e650efec70074ee?Expires=1695600000&Signature=I0Eik1jDwawwN8LxBc2-NtkA6OAwhVEc6HLsMsutLXIes-TBiiV4KuTA7Is220F~mK9pM1YNvYpQhulgNfke1yqWhUMdpk5AI5rfHuB53F03gJB5Pd63RFCS6CbAi5yxVIN~eZs8fwKSzeXDrSZg50b6OazuH2Xnc20TbQ1s7vSLhuR~k~My5oFec2FhiQgtZgESx1ANlYE3PAlUS1f0gZHn~aoLA2OIop3UwPy8-fIj0kDdxJMpfnSN1nEi8GiBdXjd7GQUK4Qspg86coLfrc1f1wzujoJSdOI7T2RDrFdd-uTSP87lhN3j5tuXm9NAK2XPG3rCPLXDqdj0nYTjyQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                            alt="">
+                        <div class="info">
+                            <p>Mi portal U</p>
+                            <div class="label">
+                                <div class="tags">UX Design</div>
+                                <div class="tags">University</div>
+                                <div class="tags">JavaScript</div>
+                            </div>
+                        </div>
+                        <button>Figma community</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>SKILLS</p>
+            <div class="skill-discp">
+                <div class="skill-up">
+                    <div class="skill-section">
+                        <div class="graph">
+                            <div class="pic">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="221" height="220" viewBox="0 0 221 220"
+                                    fill="none">
+                                    <path
+                                        d="M220.5 110C220.5 170.751 171.251 220 110.5 220C49.7487 220 0.5 170.751 0.5 110C0.5 49.2487 49.7487 0 110.5 0C171.251 0 220.5 49.2487 220.5 110ZM33.5 110C33.5 152.526 67.9741 187 110.5 187C153.026 187 187.5 152.526 187.5 110C187.5 67.4741 153.026 33 110.5 33C67.9741 33 33.5 67.4741 33.5 110Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44.3855 176.114C37.9419 182.558 27.3757 182.619 21.9674 175.284C8.62684 157.193 1.06631 135.327 0.530533 112.592C-0.135662 84.3227 10.11 56.883 29.1406 35.9686C48.1712 15.0543 74.5249 2.2718 102.731 0.274693C130.937 -1.72241 158.829 7.21927 180.617 25.2435C202.404 43.2678 216.414 68.9901 219.738 97.0709C223.061 125.152 215.443 153.434 198.465 176.046C181.487 198.659 156.454 213.865 128.561 218.507C106.128 222.241 83.2316 218.912 62.9613 209.198C54.7436 205.259 52.8231 194.869 57.9452 187.332C63.0673 179.795 73.2985 178.031 81.7524 181.433C94.7755 186.673 109.089 188.294 123.142 185.955C142.668 182.705 160.191 172.061 172.076 156.232C183.96 140.404 189.293 120.606 186.966 100.95C184.64 81.2931 174.833 63.2875 159.582 50.6705C144.33 38.0535 124.806 31.7943 105.062 33.1923C85.3174 34.5903 66.8698 43.538 53.5484 58.178C40.227 72.8181 33.055 92.0259 33.5214 111.814C33.857 126.057 38.1313 139.813 45.7195 151.624C50.6453 159.29 50.8292 169.671 44.3855 176.114Z"
+                                        fill="url(#paint0_linear_2_6646)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2_6646" x1="0.5" y1="110" x2="220.5" y2="110"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FA709A" />
+                                            <stop offset="1" stop-color="#FEE140" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p>97%</p>
+                        </div>
+                        <div class="text">
+                            <h1>UX Design</h1>
+                            <h4>UI design is the process of designing the visual and interactive elements of a user
+                                interface, such as buttons, icons, and layout, to create an intuitive and pleasing
+                                experience for users.</h4>
+                        </div>
+                    </div>
+                    <div class="skill-section">
+                        <div class="graph">
+                            <div class="pic">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="221" height="220" viewBox="0 0 221 220"
+                                    fill="none">
+                                    <path
+                                        d="M220.5 110C220.5 170.751 171.251 220 110.5 220C49.7487 220 0.5 170.751 0.5 110C0.5 49.2487 49.7487 0 110.5 0C171.251 0 220.5 49.2487 220.5 110ZM33.5 110C33.5 152.526 67.9741 187 110.5 187C153.026 187 187.5 152.526 187.5 110C187.5 67.4741 153.026 33 110.5 33C67.9741 33 33.5 67.4741 33.5 110Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44.3855 176.114C37.9419 182.558 27.3757 182.619 21.9674 175.284C8.62684 157.193 1.06631 135.327 0.530533 112.592C-0.135662 84.3227 10.11 56.883 29.1406 35.9686C48.1712 15.0543 74.5249 2.2718 102.731 0.274693C130.937 -1.72241 158.829 7.21927 180.617 25.2435C202.404 43.2678 216.414 68.9901 219.738 97.0709C223.061 125.152 215.443 153.434 198.465 176.046C181.487 198.659 156.454 213.865 128.561 218.507C106.128 222.241 83.2316 218.912 62.9613 209.198C54.7436 205.259 52.8231 194.869 57.9452 187.332C63.0673 179.795 73.2985 178.031 81.7524 181.433C94.7755 186.673 109.089 188.294 123.142 185.955C142.668 182.705 160.191 172.061 172.076 156.232C183.96 140.404 189.293 120.606 186.966 100.95C184.64 81.2931 174.833 63.2875 159.582 50.6705C144.33 38.0535 124.806 31.7943 105.062 33.1923C85.3174 34.5903 66.8698 43.538 53.5484 58.178C40.227 72.8181 33.055 92.0259 33.5214 111.814C33.857 126.057 38.1313 139.813 45.7195 151.624C50.6453 159.29 50.8292 169.671 44.3855 176.114Z"
+                                        fill="url(#paint0_linear_2_6646)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2_6646" x1="0.5" y1="110" x2="220.5" y2="110"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FA709A" />
+                                            <stop offset="1" stop-color="#FEE140" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p>97%</p>
+                        </div>
+                        <div class="text">
+                            <h1>UI Design</h1>
+                            <h4>UI design is the process of designing the visual and interactive elements of a user
+                                interface, such as buttons, icons, and layout, to create an intuitive and pleasing
+                                experience for users.UI design is the process of designing the visual and interactive
+                                elements of a user interface, such as buttons, icons, and layout, to create an intuitive
+                                and pleasing experience for users.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-down">
+                    <div class="skill-section">
+                        <div class="graph">
+                            <div class="pic">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="221" height="220" viewBox="0 0 221 220"
+                                    fill="none">
+                                    <path
+                                        d="M220.5 110C220.5 170.751 171.251 220 110.5 220C49.7487 220 0.5 170.751 0.5 110C0.5 49.2487 49.7487 0 110.5 0C171.251 0 220.5 49.2487 220.5 110ZM33.5 110C33.5 152.526 67.9741 187 110.5 187C153.026 187 187.5 152.526 187.5 110C187.5 67.4741 153.026 33 110.5 33C67.9741 33 33.5 67.4741 33.5 110Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44.3855 176.114C37.9419 182.558 27.3757 182.619 21.9674 175.284C8.62684 157.193 1.06631 135.327 0.530533 112.592C-0.135662 84.3227 10.11 56.883 29.1406 35.9686C48.1712 15.0543 74.5249 2.2718 102.731 0.274693C130.937 -1.72241 158.829 7.21927 180.617 25.2435C202.404 43.2678 216.414 68.9901 219.738 97.0709C223.061 125.152 215.443 153.434 198.465 176.046C181.487 198.659 156.454 213.865 128.561 218.507C106.128 222.241 83.2316 218.912 62.9613 209.198C54.7436 205.259 52.8231 194.869 57.9452 187.332C63.0673 179.795 73.2985 178.031 81.7524 181.433C94.7755 186.673 109.089 188.294 123.142 185.955C142.668 182.705 160.191 172.061 172.076 156.232C183.96 140.404 189.293 120.606 186.966 100.95C184.64 81.2931 174.833 63.2875 159.582 50.6705C144.33 38.0535 124.806 31.7943 105.062 33.1923C85.3174 34.5903 66.8698 43.538 53.5484 58.178C40.227 72.8181 33.055 92.0259 33.5214 111.814C33.857 126.057 38.1313 139.813 45.7195 151.624C50.6453 159.29 50.8292 169.671 44.3855 176.114Z"
+                                        fill="url(#paint0_linear_2_6646)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2_6646" x1="0.5" y1="110" x2="220.5" y2="110"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FA709A" />
+                                            <stop offset="1" stop-color="#FEE140" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p>97%</p>
+                        </div>
+                        <div class="text">
+                            <h1>Information Architecture</h1>
+                            <h4>Information architecture is the design of the structure and organization of content on a
+                                website or digital product to make it easy for users to navigate and understand.</h4>
+                        </div>
+                    </div>
+                    <div class="skill-section">
+                        <div class="graph">
+                            <div class="pic">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="221" height="220" viewBox="0 0 221 220"
+                                    fill="none">
+                                    <path
+                                        d="M220.5 110C220.5 170.751 171.251 220 110.5 220C49.7487 220 0.5 170.751 0.5 110C0.5 49.2487 49.7487 0 110.5 0C171.251 0 220.5 49.2487 220.5 110ZM33.5 110C33.5 152.526 67.9741 187 110.5 187C153.026 187 187.5 152.526 187.5 110C187.5 67.4741 153.026 33 110.5 33C67.9741 33 33.5 67.4741 33.5 110Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44.3855 176.114C37.9419 182.558 27.3757 182.619 21.9674 175.284C8.62684 157.193 1.06631 135.327 0.530533 112.592C-0.135662 84.3227 10.11 56.883 29.1406 35.9686C48.1712 15.0543 74.5249 2.2718 102.731 0.274693C130.937 -1.72241 158.829 7.21927 180.617 25.2435C202.404 43.2678 216.414 68.9901 219.738 97.0709C223.061 125.152 215.443 153.434 198.465 176.046C181.487 198.659 156.454 213.865 128.561 218.507C106.128 222.241 83.2316 218.912 62.9613 209.198C54.7436 205.259 52.8231 194.869 57.9452 187.332C63.0673 179.795 73.2985 178.031 81.7524 181.433C94.7755 186.673 109.089 188.294 123.142 185.955C142.668 182.705 160.191 172.061 172.076 156.232C183.96 140.404 189.293 120.606 186.966 100.95C184.64 81.2931 174.833 63.2875 159.582 50.6705C144.33 38.0535 124.806 31.7943 105.062 33.1923C85.3174 34.5903 66.8698 43.538 53.5484 58.178C40.227 72.8181 33.055 92.0259 33.5214 111.814C33.857 126.057 38.1313 139.813 45.7195 151.624C50.6453 159.29 50.8292 169.671 44.3855 176.114Z"
+                                        fill="url(#paint0_linear_2_6646)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2_6646" x1="0.5" y1="110" x2="220.5" y2="110"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FA709A" />
+                                            <stop offset="1" stop-color="#FEE140" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p>97%</p>
+                        </div>
+                        <div class="text">
+                            <h1>Figma</h1>
+                            <h4>Figma is a cloud-based design tool that allows teams to collaborate on the design
+                                process in real time. It offers a range of features for designing, prototyping, and
+                                sharing user interfaces.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="unsplash">
+            <img src="https://s3-alpha-sig.figma.com/img/0610/cd48/9f8cdef62d5db5b95a61f7244197b95d?Expires=1695600000&Signature=fk-Q~NirDCeencD5-8KgZ1rjsWSvxcTmlD~BprwKu2-ADDYnosphyscN3m~Uq3WQUY6zvBEaE3yIsb152dtUpAx7GGzWzxllag3XckksDanDZgwfZt3sIJ6mfXZA2akMFxhsj76dlNlJc2-Cx80swI6YsysetIHAmA1nJv5ZUx-OzEJC8LiPaOrVpUNhwb4XpGlDct~6tiEcdaoGbT2mY5Hf4FnebXM5~4e7eIe2WJB8qnnyAIADn4uAQCccSrxqeWLOxCF7IBpwvuT16cyDrTtYXrFuvPV950Gj8OJ4sV4L4YObDPfYFUp3WsgXKeyOgJ3onvxoJC1OsYfnrFgiGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="">
+            <div class="unsplash-text">
+                <h5>Kaleb Lechtenberg</h5>
+                <h3>"Working with this freelancer has been great. His attention to detail is unparalleled and finished
+                    all work ahead of schedule. Will gladly send more work and I do not hesitate to recommend him to you
+                    on your project also."</h3>
+                <div class="shield">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="86" viewBox="0 0 72 86" fill="none">
+                        <path
+                            d="M71.0158 10.6128C49.7908 10.6128 35.9486 0 35.9486 0C35.9486 0 22.1064 10.6128 1.06636 10.6128C1.06636 10.6128 -1.33295 44.281 1.06636 55.9915C3.2811 66.9702 35.9486 86 35.9486 86C35.9486 86 68.6164 66.9702 71.0158 55.9915C73.2303 44.4637 71.0158 10.6128 71.0158 10.6128Z"
+                            fill="white" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="aboutMe">
+            <p>ABOUT ME</p>
+            <div class="first-sec">
+                <h1>I am a<small>Product Designer</small>and Frontend Developer, I fully understand the process of
+                    design and
+                    development of a digital product, my job is to make a product usable and visually appealing, through
+                    the<small>Design Thinking</small>methodology I manage to create products that are endearing to
+                    users.
+                </h1>
+                <img src="https://s3-alpha-sig.figma.com/img/8458/5425/c377d79b699da58379d3118830dc46cd?Expires=1695600000&Signature=UD5nwIJvsY3C9MdYhn1abKVWZRVYXggzznn0-GlO-af6ovokpeDlFw~GQ6zHRVhwSzbyUWg7TMR7C0Ly1JlhCgUUElhO2pw8UugE8Cr3kfAiMKmuoKK2vrOVmcudTBsqOaE-izgvp6f8iAd4lfhn-q7q63MTiRyMD7t7ndyC5qam500XOaPGdyovD1BICYRfqm8n0sXESv1vqyjVw1QIxs0Iqi3CJ8fNqFR~~-9ze-6pm5avNFnE~hswj-51h8Pm1KJmx7G-sPE8VE3koOyypbIiyObSichdK-dpEDeivv~mtR~qAcIriL6Yx0DoFGfQKK8qBQ6Fv6Liqr9tKFxx2w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+            </div>
+            <div class="second-sec">
+                <img src="https://s3-alpha-sig.figma.com/img/669d/cd68/41316afa2f7756f03070e0f8f5615d00?Expires=1695600000&Signature=VMes5-LQ9RbyacponyUxwsgkU8QfyiB7BWOEh0WkgsoWvCb29Cd6sQONFsLle05dK2n-Ekw1kipUjYE33dpDFVzw4QVUcC~V-XU3ptCyf05aDVwe4nYfvaBy6tlZul-InF8jqYsn1yEeO9WYi-vc3k3sZEX80jyxuBD-b9X0LsISGuP3j8OVd6ckLsSbiNUTd1DFcs8uPYPR6-On65RT2SYkBDhvOCkGQ~8YJ2QhP5CI4MVP0bax0n-J4E-6TGuFEHOTluG~G1WHNdWWJYJN82~nibNmQ1FoQMxp2oUQnCrb2Pet3rzR1m177McibbPP4XboqNhVYPVGUb44BOaocQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+                <h1>I am passionate about <small>never stop learning</small>, I am constantly training and learning
+                    about new
+                    and
+                    changing <small>technology</small> trends that way I bring an updated opinion of the Tech industry.
+                </h1>
+            </div>
+            <div class="third-sec">
+                <h1>My full name is <small>Cristian David Muñoz Camayo</small> and more than what I said before I am a
+                    dreamer,
+                    I am
+                    proudly <small class="colombian">Colombian</small> and in me you will find a human being with the
+                    desire to do his
+                    best to help
+                    others.</h1>
+                <img src="https://s3-alpha-sig.figma.com/img/2f2a/9aab/0bcbfd7ab1fc9293937ea3b5c16f8420?Expires=1695600000&Signature=PSSsqRGaibfuqNJno5MnbyLhJiUdgwHJXJr235NjHKdPkr4wyJP96SdPdHS0g20HU3fIh8HCHEz3TY~-M3jdpmwoThvdfifY76ZGFluVG~YOHkGXi7SPLzYeRAGxggFJmap7jptsKf8ChDa~0qdWd-WN9yWhHZcwh48uqWlrK5xujWdwyMD6lj2qktEOZCGFdR1TZXvBT5Ysyw4iR4V-~sCn5VEMhMCZNw3Yx8crmeniT29uyZqcETL9cyrHz2mrpL5qDvamgSHyOryi0vp4IYpYgVFSCdzDk-YdJXmy4sQQSZQjadfriSUYtz2Ua6wt3-0fFDO2hGDb2GZU3Frg2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="appreciation">
+            <div class="symbol1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="125" viewBox="0 0 150 125" fill="none">
+                    <g clip-path="url(#clip0_2_6704)">
+                        <path
+                            d="M147.891 125C152.48 111.353 152.582 81.4995 116.282 71.2641C90.4865 63.9907 78.0957 51.9796 72.9623 42.5762C69.7118 36.6218 68.8102 29.4706 64.7769 24.0159C54.1337 9.62221 31.7782 -2.95042 -2 23.1576"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M130.891 138C135.48 125.636 135.582 98.5893 99.2816 89.3162C74.9952 83.1121 62.5909 73.103 56.9387 64.8432C52.7603 58.7371 51.6026 50.7873 46.7015 45.2445C35.6678 32.766 13.6799 22.8482 -19 45.7326"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M116.891 157C121.48 145.102 121.582 119.076 85.2816 110.153C61.6082 104.334 49.2247 95.0358 43.3797 87.2088C38.803 81.0802 37.5068 72.7956 32.239 67.2497C21.0596 55.48 -0.770549 46.4971 -33 68.2144"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M91.8912 168C96.4797 156.102 96.5817 130.076 60.2816 121.153C36.6082 115.334 24.2247 106.036 18.3797 98.2088C13.803 92.0802 12.5068 83.7956 7.23901 78.2497C-3.94036 66.48 -25.7705 57.4971 -58 79.2144"
+                            stroke="white" stroke-width="2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2_6704">
+                            <rect width="150" height="125" fill="white" transform="matrix(-1 0 0 -1 150 125)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="symbol2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="125" viewBox="0 0 150 125" fill="none">
+                    <g clip-path="url(#clip0_2_6710)">
+                        <path
+                            d="M2.10877 0C-2.47972 13.6472 -2.58169 43.5005 33.7184 53.7359C59.5135 61.0093 71.9043 73.0204 77.0377 82.4238C80.2882 88.3782 81.1898 95.5294 85.2231 100.984C95.8663 115.378 118.222 127.95 152 101.842"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M19.1088 -13C14.5203 -0.635856 14.4183 26.4107 50.7184 35.6838C75.0048 41.8879 87.4091 51.897 93.0613 60.1568C97.2397 66.2629 98.3974 74.2127 103.299 79.7555C114.332 92.234 136.32 102.152 169 79.2674"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M33.1088 -32C28.5203 -20.1024 28.4183 5.92351 64.7184 14.8467C88.3918 20.666 100.775 29.9642 106.62 37.7912C111.197 43.9198 112.493 52.2044 117.761 57.7503C128.94 69.52 150.771 78.5029 183 56.7856"
+                            stroke="white" stroke-width="2" />
+                        <path
+                            d="M58.1088 -43C53.5203 -31.1024 53.4183 -5.07649 89.7184 3.84669C113.392 9.666 125.775 18.9642 131.62 26.7912C136.197 32.9198 137.493 41.2044 142.761 46.7503C153.94 58.52 175.771 67.5029 208 45.7856"
+                            stroke="white" stroke-width="2" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2_6710">
+                            <rect width="150" height="125" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="appreciation-text">
+                <p>Thanks for visit my website</p>
+                <p>If you have any questions you can write me to any of my social networks, I am sure I will answer
+                    you.</p>
+            </div>
+        </div>
+        <div class="footer-last">
+            <div class="footer-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <path
+                        d="M45.785 26.3324C44.9322 27.1903 44.2793 28.2258 43.8725 29.3647C43.4657 30.5039 43.3152 31.7187 43.4315 32.9226L43.391 32.8821C43.5107 34.2994 43.3194 35.7255 42.831 37.0613C42.3425 38.3969 41.5685 39.6099 40.563 40.6156C39.5572 41.6211 38.3442 42.3954 37.0084 42.8836C35.6728 43.3721 34.2465 43.5633 32.8295 43.4436L32.87 43.4841C31.1748 43.3264 29.4723 43.6952 27.9942 44.5405C26.5164 45.3858 25.3352 46.6663 24.6118 48.2076C23.8884 49.7488 23.6578 51.4755 23.9517 53.1526C24.2457 54.8295 25.0497 56.3751 26.2541 57.5784C27.4585 58.7817 29.0047 59.5842 30.6819 59.8765C32.3592 60.169 34.0857 59.9368 35.6262 59.2121C37.1668 58.4871 38.4462 57.305 39.2901 55.8263C40.1341 54.3476 40.5015 52.6448 40.3422 50.9496L40.385 50.9901C40.2653 49.5731 40.4563 48.1468 40.9448 46.811C41.4333 45.4754 42.2075 44.2624 43.213 43.2567C44.2188 42.2511 45.4317 41.4769 46.7673 40.9887C48.1032 40.5002 49.5292 40.3089 50.9465 40.4286L50.9037 40.3881C52.2884 40.5126 53.6823 40.2855 54.956 39.728C56.2295 39.1704 57.3419 38.3004 58.1897 37.1985C59.0375 36.0967 59.5937 34.7985 59.8061 33.4246C60.0187 32.0505 59.881 30.6452 59.4058 29.3384C58.9306 28.0318 58.1332 26.8663 57.0876 25.9499C56.0421 25.0335 54.7821 24.3958 53.4244 24.0961C52.0668 23.7964 50.6553 23.8441 49.3211 24.2349C47.9868 24.626 46.773 25.3473 45.7917 26.3324H45.785Z"
+                        fill="white" />
+                    <path
+                        d="M29.1868 38.1784L29.144 38.1379C30.3485 38.2591 31.5648 38.1113 32.7053 37.705C33.8456 37.2986 34.8815 36.6441 35.7379 35.7884C36.594 34.9327 37.2497 33.8973 37.6567 32.7572C38.0639 31.6171 38.2127 30.401 38.0923 29.1964L38.135 29.2369C38.0153 27.8196 38.2066 26.3935 38.6948 25.0577C39.1833 23.7221 39.9575 22.5091 40.9631 21.5034C41.9688 20.4979 43.1818 19.7236 44.5174 19.2354C45.8532 18.7468 47.2793 18.5557 48.6965 18.6754L48.6538 18.6349C50.3492 18.7942 52.0522 18.4264 53.5309 17.5821C55.0098 16.7378 56.192 15.4578 56.9165 13.9168C57.641 12.3759 57.8725 10.649 57.5795 8.97157C57.2866 7.29417 56.4833 5.74801 55.2791 4.54395C54.0752 3.33991 52.529 2.53657 50.8516 2.24357C49.1742 1.95055 47.4473 2.1821 45.9063 2.90665C44.3653 3.63117 43.0855 4.81343 42.2411 6.29215C41.3966 7.77085 41.029 9.47404 41.1883 11.1694L41.1478 11.1266C41.2677 12.5439 41.0769 13.9702 40.5887 15.3061C40.1004 16.642 39.3262 17.8552 38.3207 18.861C37.3149 19.8665 36.1017 20.6407 34.7659 21.129C33.4298 21.6172 32.0036 21.808 30.5863 21.6881L30.6268 21.7309C29.4224 21.6096 28.2058 21.7574 27.0655 22.1638C25.9252 22.5699 24.8893 23.2246 24.0329 24.0803C23.1766 24.936 22.5212 25.9714 22.1139 27.1115C21.7069 28.2516 21.5582 29.4677 21.6785 30.6724L21.638 30.6319C21.7573 32.0489 21.5658 33.475 21.0773 34.8106C20.5886 36.1459 19.8146 37.3589 18.8091 38.3644C17.8035 39.37 16.5907 40.144 15.2551 40.6327C13.9196 41.1211 12.4936 41.3126 11.0765 41.1934L11.117 41.2339C9.4217 41.0746 7.71852 41.4422 6.2398 42.2866C4.7611 43.1311 3.57883 44.4109 2.85431 45.9519C2.12977 47.4929 1.8982 49.2198 2.19121 50.8972C2.48423 52.5745 3.28757 54.1207 4.49161 55.3247C5.69568 56.5289 7.24183 57.3322 8.91923 57.6251C10.5966 57.9181 12.3236 57.6865 13.8645 56.962C15.4055 56.2375 16.6854 55.0554 17.5298 53.5767C18.3742 52.0978 18.7418 50.3947 18.5825 48.6994L18.6253 48.7399C18.5056 47.3226 18.6968 45.8965 19.1853 44.5607C19.6736 43.2251 20.4478 42.0121 21.4533 41.0064C22.4591 40.0009 23.672 39.2266 25.0076 38.7384C26.3435 38.2499 27.7695 38.0587 29.1868 38.1784Z"
+                        fill="white" />
+                    <path
+                        d="M14.1073 33.6632C14.9601 32.8055 15.613 31.77 16.0194 30.6308C16.4259 29.4917 16.5758 28.2767 16.4585 27.0729L16.5013 27.1134C16.3815 25.6959 16.5727 24.2692 17.0614 22.9331C17.5502 21.5971 18.3247 20.3839 19.3309 19.3781C20.3371 18.3724 21.5505 17.5985 22.8868 17.1103C24.223 16.6222 25.6498 16.4316 27.0673 16.5519L27.0245 16.5114C28.7192 16.6702 30.4218 16.3023 31.8998 15.4581C33.3778 14.6138 34.5593 13.3341 35.2836 11.7937C36.0076 10.2532 36.2389 8.52688 35.946 6.85011C35.653 5.17335 34.8498 3.62778 33.6463 2.42416C32.4427 1.22055 30.897 0.417475 29.2203 0.12448C27.5436 -0.168537 25.8172 0.0628076 24.2768 0.786903C22.7362 1.511 21.4567 2.69263 20.6125 4.17066C19.768 5.64868 19.4002 7.35117 19.559 9.04591L19.5185 9.00541C19.6382 10.4226 19.447 11.8488 18.9585 13.1845C18.47 14.5202 17.6961 15.7332 16.6904 16.7388C15.6848 17.7445 14.4718 18.5185 13.1361 19.0069C11.8004 19.4954 10.3742 19.6866 8.95702 19.5669L8.99752 19.6074C7.6128 19.4832 6.21913 19.7107 4.94568 20.2685C3.67222 20.8262 2.56016 21.6965 1.71256 22.7986C0.864965 23.9004 0.30926 25.1987 0.096905 26.5725C-0.115427 27.9466 0.022475 29.3519 0.497833 30.6583C0.97319 31.9649 1.77066 33.1301 2.8163 34.0463C3.86194 34.9628 5.12194 35.6002 6.47955 35.8999C7.83713 36.1994 9.2484 36.1514 10.5826 35.7606C11.9167 35.3696 13.1306 34.6482 14.1118 33.6632H14.1073Z"
+                        fill="white" />
+                </svg>
+                <p>tian</p>
+            </div>
+            <div class="footer-options">
+                <h6>Home</h6>
+                <h6>Portfolio</h6>
+                <h6>Skills</h6>
+                <h6>About Me</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

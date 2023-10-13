@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project3</title>
+    <script src="https://kit.fontawesome.com/5e43aa6037.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            direction: ltr;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+
+        .container {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1400px;
+            height: 845px;
+        }
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 570px;
+            height: 230.801px;
+            flex-shrink: 0;
+            gap: 5px;
+        }
+
+        .title {
+            width: 570px;
+            color: #1E0E62;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            letter-spacing: -0.4px;
+            margin-bottom: 0px;
+
+        }
+
+        .lead {
+            width: 555px;
+            color: rgba(21, 20, 57, 0.4);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+
+        }
+
+        .middle-fill {
+            width: 160px;
+            height: 50px;
+            flex-shrink: 0;
+            background-color: #E93A7D;
+            border-radius: 50px 50px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button.index {
+            color: #FFF;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            border: none;
+            background-color: #E93A7D;
+            position: absolute;
+            margin-left: 33px;
+            margin-top: 10px;
+
+        }
+
+        .features {
+            display: flex;
+            width: 591px;
+            height: 216.199px;
+            flex-shrink: 0;
+            justify-content: space-between;
+            gap: 85px;
+            margin-top: -51px;
+        }
+
+        .feature1 {
+            width: 267px;
+            height: 216.199px;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            color: #EBEAED;
+            font-family: "FontAwesome";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38px;
+        }
+
+        .second-title {
+            color: #1E0E62;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+
+        }
+
+        .discription-right {
+            color: rgba(21, 20, 57, 0.40);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            width: 267px;
+
+        }
+
+        .discription-left{
+            color: rgba(21, 20, 57, 0.40);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            width: 267px;
+            width: 239px;
+        }
+
+
+        .pic {
+            display: flex;
+            flex-direction: column;
+            width: 485px;
+            height: 845px;
+            flex-shrink: 0;
+            justify-content: right;
+        }
+
+        .pic img {
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            width: 485px;
+            height: 845px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="heading">
+                <h3 class="title">Build Your Own Site like a Big Company Owner</h3>
+                <h5 class="lead">We have created a new product that will help designers, developers and companies
+                    create
+                    websites for their startups quickly and easily.</h5>
+            </div>
+            <div class="middle-fill">
+                <button class="index">Learn More</button>
+            </div>
+            <div class="features">
+                <div class="feature1">
+                    <i class="icon"></i>
+                    <h5 class="second-title">Based on Bootstrap 4</h5>
+                    <p class="discription-right">HTML layout is based on one of the most common and reliable framework -
+                        Bootstrap.
+                    </p>
+                </div>
+                <div class="feature2">
+                    <i class="icon"></i>
+                    <h5 class="second-title">HTML5 & CSS3</h5>
+                    <p class="discription-left">We used only time-tested technologies for the best results.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="pic">
+                <img src="https://www.figma.com/file/vyQuk9eWWPV1NCwjUjUj3g/image/e08f26b3dccd6dbe720b42e9b0413e3a873d2883"
+                    alt="none">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>project number two</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+        <style>
+            *{
+                direction: ltr;
+                box-sizing: border-box;
+                padding: 0px 0px;
+                margin: 0px 0px;
+            }
+
+            .head{
+                display: flex;
+                width: 100%;
+                height:50px;
+                align-items: center;
+                justify-content: center;
+                background-color: #472213;
+                gap: 10px;
+            }
+
+            .head img{
+                width:auto;
+                height: 30px;
+                border-radius: 5px 5px;
+            }
+
+            .head p{
+                color: rgb(238, 232, 196);
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                font-weight: 200px;
+            }
+
+            .container{
+                display: flex;
+                width: 100%;
+                align-items: start;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .items{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin-left: 50px;
+                background-color: #f1e0d5;
+                text-align: left;
+                border-radius: 2px 2px;
+                margin-top: 20px;
+                box-shadow: 5px 5px 5px rgb(139, 133, 133);
+                padding: 20px 10px 30px 10px ;
+            }
+
+            .option{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                flex-direction: column;
+                padding: 10px 10px;
+                
+            }
+
+            .container .items .option .line1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 200px;
+                color: black;
+            }
+
+            .container .items .option .line2{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                font-weight: 200px;
+                color: rgb(194, 98, 60);
+                border-bottom: 2px solid rgb(236, 181, 144);
+            }
+
+            
+            .forms{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin-right: 50px;
+                gap: 30px;
+                margin-top: 20px;
+                
+            }
+
+            .name-group{
+                display: flex;
+                flex-direction: column;
+                background-color: #f1e0d5;
+                box-shadow: 5px 5px 5px rgb(139, 133, 133);
+                font-family: 'Open Sans', sans-serif;
+                width: 100%;
+                border-radius: 2px 2px;
+                align-items: start;
+                padding: 0px 20px 20px 10px;
+
+            }
+
+            .name-form{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            .cardinfo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color:#f1e0d5;
+                font-family: 'Open Sans', sans-serif;
+                width: 100%;
+                border-radius: 2px 2px;
+                box-shadow: 5px 5px 5px rgb(139, 133, 133);
+                padding: 0px 20px 20px 10px;
+                gap: 10px;
+            }
+
+            .titles{
+                color: #986033 ;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-style: bold;
+                width: 50px;
+                margin: 5px 10px 0px 0px;
+                font-weight: 500px;
+                text-align: left;
+                padding: 10px 10px;
+            }
+
+
+            .name-form, .cardnumber-group, .cvv-group{
+                position: relative;
+                display: inline-block;
+            }
+
+            .nameorder-input, .cardnumber-input, .cvv-input {
+                border: 2px solid #885a2d;
+                padding: 8px;
+                border-radius: 50px;
+                background-color: #f1e0d5;
+            }
+
+            input:focus{
+                outline: none;
+                background-color:rgb(216, 176, 149);
+            }
+
+            .nameorder-lable, .cardnumber-label, .cvv-lable{
+                color:  rgb(219, 152, 107);
+                font-size: 11px;
+                position: absolute;
+                left: 25px;
+                top: -5px;
+                padding: 0 2px;
+                background-color: #f1e0d5;
+            }
+
+            .final-price{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+                text-align: center;
+                margin-top: 220px;
+                margin-bottom: -200px;
+
+            }
+
+            .final-price div.sub{
+                display: flex;
+                font-family: 'Open Sans', sans-serif;
+                color: black ;
+                font-size: 14px;
+                font-weight: 400px;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 300px;
+                line-height: 2px;
+                text-align: center;
+                margin: 20px auto;
+
+            }
+
+            .place-order{
+                display: flex;
+                width: 95%;
+                margin: 230px auto 0px auto;
+                align-items: center;
+                background-color: #e7b892 ;
+                border-radius: 10px 10px;
+            
+            }
+
+            .place-order p{
+                color:black ;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 400px;
+                text-align: center;
+                width: 100px;
+                margin: 10px auto;
+            }
+
+
+        </style>
+    </head>
+    
+    <body>
+        <div class="head">
+            <img src="./coffee_masters_logo.png" alt="logo">
+            <p>Coffee Masters</p>
+        </div>
+        <div class="container">
+            <div class="items">
+                <p class="titles">ITEMS</p>
+                <div class="option">
+                    <div class="line1">
+                        <p>1x cappuccino</p>
+                        <p>$3.35</p>
+                        
+                    </div>
+                    <div class="line2">
+                        <p>lite foam</p>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="line1">
+                        <p>1x cappuccino</p>
+                        <p>$3.85</p>
+                        
+                    </div>
+                    <div class="line2">
+                        <p>lite milk</p>
+                        <p>Double espresso</p>
+                    </div>
+                </div>
+                <div class="option">
+                    <div class="line1">
+                        <p>1x croissant</p>
+                        <p>$2.45</p>
+                    </div>
+                    <div class="line2">
+                        <p>Butter</p>
+                    </div>  
+                </div> 
+            </div>
+
+            <div class="forms">
+                <div class="name-group">
+                  <p class="titles">NAME</p>
+                  <div class="name-form">
+                    <label for="name" class="nameorder-lable">Name for order</label>
+                    <input id="name" class="nameorder-input" placeholder="Ford prefect" type="text"/>
+                  </div> 
+                </div>
+
+                <div class="cardinfo">
+                  <p class="titles">PAYMENT</p>
+                  <div class="cardnumber-group">
+                    <label for="cardnumber" class="cardnumber-label">Card number</label>
+                    <input id="cardnumber" class="cardnumber-input" placeholder="1234 5678 9012 3456" type="number" /> 
+                  </div>
+                  <div class="cvv-group">
+                    <label for="cvv" class="cvv-lable">CVV Number</label>
+                    <input id="cvv" class="cvv-input" placeholder="001" type="number"/>
+                  </div>
+                </div>
+   
+            </div>
+        </div>
+
+        <div class="final-price">
+            <div class="sub">
+                <p>Subtotal:</p>
+                <p>$9.65</p>
+            </div>
+            <div class="sub">
+                <p>Tax:</p>
+                <p>$0.82</p>
+            </div>
+            <div class="sub">
+                <p><b>Total:</b></p>
+                <p><b>$10.47</b></p>
+            </div>
+        </div>
+
+        <div class="place-order">
+            <p><b>Place Order</b></p>
+        </div>
+    </body>
+</html>
