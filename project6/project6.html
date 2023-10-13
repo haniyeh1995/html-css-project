@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project6</title>
+    <style>
+        * {
+            direction: ltr;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Figtree', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500&display=swap');
+
+        .container {
+            width: 100%;
+            display: flex;
+            max-width: 1440px;
+            max-height: 900px;
+            margin: auto;
+        }
+
+        .frame {
+            width: 400px;
+            height: 708px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 64px;
+            margin: 96px auto 96px 160px;
+        }
+
+        .photo {
+            display: flex;
+            width: 700px;
+            height: 860px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 20px 20px 20px auto;
+        }
+
+        .headline {
+            display: flex;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .headline h5 {
+            color: #000;
+            text-align: center;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .middle-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .middle-first {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .middle-first p {
+            display: flex;
+            width: 400px;
+            align-items: flex-start;
+            color: #000;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .username,
+        .middle-sec,
+        .middle-third {
+            position: relative;
+            display: inline-block;
+        }
+
+        .name-input,
+        .email-input,
+        .pass-input {
+            display: flex;
+            width: 400px;
+            height: 60px;
+            padding: 10px 20px;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.40);
+            color: rgba(0, 0, 0, 0.40);
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            padding: 10px 20px;
+        }
+
+        .middle-forth {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .signup {
+            position: relative;
+            display: inline-block;
+        }
+
+        .signup-input,
+        .apple-Button {
+            border-radius: 10px;
+            background: #000;
+            color: white;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            width: 400px;
+            height: 60px;
+            padding: 0px 64px;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .discription {
+            display: flex;
+            width: 400px;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.40);
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: underline;
+            margin-left: 4px;
+        }
+
+        .buttom-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .apple-signup,
+        .google-signup {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .apple-signup img,
+        .google-signup img {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            z-index: 1;
+            margin: 13px 8px 10px 83px;
+        }
+
+        .google-Button {
+            border-radius: 10px;
+            border: 1px solid #000;
+            background-color: white;
+            color: #000;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            padding: 10px;
+            width: 400px;
+            height: 60px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .photo div img {
+            width: 700px;
+            height: 860px;
+            border-radius: 30px;
+            position: relative;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+
+        .Headline-photo {
+            position: absolute;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            margin: 96px 74px 594px 79px;
+        }
+
+        .Headline-photo h6 {
+            display: flex;
+            width: 592px;
+            align-items: flex-start;
+            color: #FFF;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .Headline-photo p {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 546px;
+            align-items: flex-start;
+            color: #FFF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .Description-photo {
+            position: absolute;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            margin: 786px 74px 85px 79px;
+        }
+
+        .Description-photo p {
+            display: flex;
+            width: 592px;
+            align-items: flex-start;
+            color: #FFF;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div class="headline">
+                <h5>Create account</h5>
+            </div>
+            <div class="middle-frame">
+                <div class="middle-first">
+                    <p><b>Let’s get started with your 30 days trial</b></p>
+                    <div class="username">
+                        <input class="name-input" placeholder="Name" type="text" />
+                    </div>
+                </div>
+                <div class="middle-sec">
+                    <input class="email-input" placeholder="Email" type="text" />
+                </div>
+                <div class="middle-third">
+                    <input class="pass-input" placeholder="Password" type="text" />
+                </div>
+                <div class="middle-forth">
+                    <button class="signup-input">Create account</button>
+                    <div class="discription">
+                        <p class="left">Already have an account?</p>
+                        <p class="right">Log in</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttom-frame">
+                <div class="apple-signup">
+                    <img src="./Apple logo (2).svg" alt="apple">
+                    <button class="apple-Button">Sign up with Apple</button>
+                </div>
+                <div class="google-signup">
+                    <img src="./Logo.svg" alt="google">
+                    <button class="google-Button">Sign up with Google</button>
+                </div>
+            </div>
+        </div>
+        <div class="photo">
+            <div>
+                <img src="./Rectangle 1.jpg" alt="photo">
+            </div>
+            <div class="Headline-photo">
+                <h6>We’re here to optimised your workflow</h6>
+                <p>Your docs, projects, notes and reminders. Together.</p>
+            </div>
+            <div class="Description-photo">
+                <p>Finally, all your work in one place.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

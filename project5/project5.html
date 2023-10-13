@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project5</title>
+    <style>
+        * {
+            direction: ltr;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800;900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@500;700;800;900&display=swap');
+
+        .container {
+            width: 1440px;
+            height: 2544px;
+            position: relative;
+        }
+
+        .header {
+            width: 1440px;
+            height: 102px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .left-side {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 269.772px;
+            height: 81.275px;
+            flex-shrink: 0;
+            padding-left: 24px;
+        }
+
+        .left-side p {
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 41px;
+        }
+
+        .left-side div {
+            width: 100px;
+            height: 64px;
+            flex-shrink: 0;
+
+        }
+
+        .left-side div img {
+            width: 129px;
+            height: 64.5px;
+            flex-shrink: 0;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 680px;
+            height: 41px;
+            flex-shrink: 0;
+        }
+
+        .sign-up {
+            width: 168px;
+            height: 41px;
+            flex-shrink: 0;
+            background-color: #4BA87D;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding-top: 11px;
+        }
+
+        .feature,
+        .price,
+        .service,
+        .partner {
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            border-bottom: 6px solid #4BA87D;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            width: 1088px;
+            height: 383px;
+            flex-shrink: 0;
+        }
+
+        .hero .l-side {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 489px;
+            height: 317px;
+            flex-shrink: 0;
+            left: 200px;
+            top: 5px;
+            z-index: 1;
+        }
+
+        .hero .l-side h3 {
+            color: #000;
+            font-family: 'Playfair Display', serif;
+            font-size: 59px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 71px;
+        }
+
+        .hero .l-side h6 {
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+        }
+
+        .butoom-side {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .try-now {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            width: 200px;
+            height: 65px;
+            flex-shrink: 0;
+            background-color: #4BA87D;
+            padding-top: 16px;
+        }
+
+        .demo {
+            color: #4BA87D;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 2.1px;
+            width: 200px;
+            height: 65px;
+            flex-shrink: 0;
+            border: 3px solid #4BA87D;
+            background-color: #FFF;
+            padding-top: 16px;
+        }
+
+        .hero .r-side {
+            position: relative;
+            display: flex;
+            width: 680px;
+            height: 383px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            top: -98px;
+            left: -421px;
+        }
+
+        .hero .r-side img {
+            position: absolute;
+            width: 680px;
+            height: 383px;
+            flex-shrink: 0;
+            filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.16));
+            left: 610px;
+            top: 140px;
+        }
+
+        .background-img {
+            position: relative;
+            width: 100%;
+            height: 744px;
+            flex-shrink: 0;
+            opacity: 0.04;
+            background: #F7F7F7;
+            top: 50px;
+        }
+
+        .video {
+            width: 944px;
+            height: 628.085px;
+            flex-shrink: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 650px;
+            left: 309px;
+
+        }
+
+        .video-img {
+            position: relative;
+            width: 944px;
+            height: 531px;
+            flex-shrink: 0;
+            background: url(<path-to-image>), lightgray 0px 0px / 100% 100% no-repeat;
+        }
+
+        .text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text h2 {
+            color: #FFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 80px;
+
+        }
+
+        .text p {
+            color: #4BA87D;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            width: 200px;
+            height: 65px;
+            flex-shrink: 0;
+            background-color: #FFF;
+            position: absolute;
+            top: 85px;
+            padding-top: 18px;
+        }
+
+        .sec4 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            width: 1089px;
+            height: 530px;
+            flex-shrink: 0;
+        }
+
+        .pic-sec4 {
+            display: flex;
+            gap: 20px;
+            /* justify-content: center;
+            align-items: center; */
+            padding-left: 477px;
+        }
+
+        .section {
+            display: flex;
+            width: 342px;
+            height: 239px;
+            flex-shrink: 0;
+        }
+
+        .section img {
+            position: relative;
+            width: 342px;
+            height: 239px;
+            flex-shrink: 0;
+            filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.16));
+            background: linear-gradient(0deg, #000 0%, rgba(84, 84, 84, 0.00) 100%);
+        }
+
+        .case-study {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            bottom: 985px;
+            padding-left: 20px;
+        }
+
+        .case-study .name {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 40px;
+            width: 220px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+
+        .case-study .time {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+            width: 266px;
+            height: 34px;
+            flex-shrink: 0;
+        }
+
+        .input-sec4 {
+            width: 668px;
+            height: 110px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            padding-left: 110px;
+            padding-top: 25px;
+        }
+
+        .input-text {
+            width: 904px;
+            height: 126px;
+            flex-shrink: 0;
+            color: #000;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 48px;
+            /* 109.091% */
+        }
+
+        .register {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            padding-left: 120px;
+            padding-top: 11px;
+        }
+
+        .email {
+            position: relative;
+            display: inline-block;
+        }
+
+        .email-input {
+            color: #000;
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            padding: 20px;
+            border-radius: 2px;
+            border: 1px solid #9F9F9F;
+            background: #FFF;
+            width: 420px;
+            height: 65px;
+            flex-shrink: 0;
+        }
+
+        .register p {
+            color: #FFF;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            width: 221px;
+            height: 65px;
+            flex-shrink: 0;
+            background-color: #4BA87D;
+            padding-top: 20px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 442px;
+            flex-shrink: 0;
+            background-color: #4BA87D;
+            position: relative;
+            bottom: -200px;
+            left: 50px;
+        }
+
+        .logo {
+            display: flex;
+            width: 197.387px;
+            height: 60.233px;
+            flex-shrink: 0;
+            padding-left: 100px;
+            padding-top: 76px;
+        }
+
+        .logo-pic img {
+            width: 92px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+
+        .logo p {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 31px;
+        }
+
+        .footer-links {
+            width: 563px;
+            height: 199.86px;
+            flex-shrink: 0;
+            display: flex;
+            padding-left: 700px;
+            gap: 50px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+            /* 115.789% */
+        }
+
+        .divider {
+            width: 1088px;
+            height: 2px;
+            flex-shrink: 0;
+            background-color: #DBDBDB;
+            position: relative;
+            bottom: -61px;
+            left: 180px;
+        }
+
+        .ninjaMail {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            width: 562px;
+            height: 18px;
+            position: relative;
+            bottom: -75px;
+            left: 200px;
+        }
+
+        .links2 {
+            display: flex;
+            gap: 50px;
+            padding-left: 950px;
+            padding-top: 56px;
+        }
+
+        .links2 p {
+            color: #FFF;
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left-side">
+                <div>
+                    <img src="https://s3-alpha-sig.figma.com/img/b561/7758/53b16e9c9138f867a828189389cfc8e7?Expires=1694390400&Signature=VgvQJEBOfP7cF8KkjWM3vcpB5wkpyC1pR4IalyW6hXYXYbJO3zhWkYf6Tj9hOt8Jn4gndhar~cgaCmR57gK775qsgWJQEGLxZV6Mhv6lLao52hC1aPV7p6lW0zwi8HxIoUdpY0mgTDd-yIDB2gur3qmVkumF5wMq66RkpADSRk7fIsPbuNbcAv6Rnp9tJ5h~PaU2-Jck4M0uECOdQcnE4y8dkZe6NVlkIjuzYw0dNlxwSq9Fu2UmZ19CiiRA3CJlTSJXKD4mVN1lfSfMQes8loxsc9mdjqyuXyezvoxlKkhWNtVYzGpSKtesouPT7Kq2yHn5jkUK12LQP8-aoQjDJw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="error">
+                </div>
+                <p>NinjaMail</p>
+            </div>
+            <nav>
+                <p class="feature">FEATURES</p>
+                <p class="price">PRICING</p>
+                <p class="service">SERVICES</p>
+                <p class="partner">PARTNERS</p>
+                <p class="sign-up">SIGN UP FREE</p>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="l-side">
+                <h3>Create Stunning Email Campaigns</h3>
+                <h6>Create and launch email campaigns that captivate your customers in just a few clicks.</h6>
+                <div class="butoom-side">
+                    <p class="try-now">TRY NOW</p>
+                    <p class="demo">GET A DEMO</p>
+                </div>
+
+            </div>
+            <div class="r-side">
+                <img src="https://s3-alpha-sig.figma.com/img/412a/cf8d/b3dfbfcf0e383318c4d1ece066278c09?Expires=1694390400&Signature=p~QQ2hukJvcqTyC4Qm8OOJrcyGI1A9vBTC0PBTWg9zCuDMiMejVCgiN1c9et94nfYey01rOGu0JYK0Ls~XNMSNsYzSVNoJyHPwfZDqrlBNDMkczkKD7pqYw7WzllpFSUxtZQ66dCexBB-Fg8JmntK1uZ2lAidPp5IF3f3hkn6tjsB-E82PlGqlsCYK9nPHkRXQdhNOcwasAy8RsvuePIdTwVLKPZ52FD1hD1bZaiaPfVXONT1DcorGyMc9UZAaYQSDCuIrS7ZpAVAMNrn7E~9aAFeMWJEWwmRHfxtLobuJ-mpljyf8zHIFN--fCyRkmCtzk9B9CVLgCZKFZT~fFqOw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="error">
+            </div>
+        </div>
+        <div class="Vid-Gray-BG">
+            <img class="background-img"
+                src="https://s3-alpha-sig.figma.com/img/7ede/9177/72625f02ebaa320065e9593a1d738397?Expires=1694390400&Signature=csQzdnR1YNk~Gfsz3BwhHTiHnos16UjBB~auvotXIdK1iLiy0go7XQphDBuL~AxwiL6IKFjqkngOLsMtQq83YxpCRU4keymzqkE~y8TTbPmxAKIpm1AzvNjl06it3b-bxggvjR1fi~9n9FiM20ohk0IIyayxpbB8QG4ypllRJnVggE08qkA~Mctijr5uZ7IeFExlbAovntuHvuO5T-y9KzNrKi5A5eh~ZtZunX9mk1nsHYASr4dssdYqBLCR~n19np8wsaH4ggAsm5tMoFgUMgsMg4JbeiAcMCVjlrn9rTvGFf3t2drtU2dCI9whgV0KD1w~I~gLNIdCEUrfF-q4Ag__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                alt="">
+            <div class="video">
+                <img class="video-img"
+                    src="https://s3-alpha-sig.figma.com/img/2bf8/9fb3/1344684045c78c309cb12f283a9b0562?Expires=1694390400&Signature=qeKhK3QWKiBTF27bN25zbyJxEmOTuyviJDaERmQuJj8JyxFHVJ7Ex~YfVGWAi38nkxgP7-aCoxCQ2AyGxsjC3bStWCx3LYP9Tagp4hWhvJ4CU39jLyn5lDQGHMJDvklloUafBFy2KlJgViBrUw8IlJivnF6xyZjAQ~fAeztWTWg2UNX0-SQ2TmyrK0jsFkIkyaAnFzdB4gRaqjth2AYpkJQ0-PBPTImnXvS6yhwG7i8hwcGgLCkAHadpj7qq4Ckm1LTIAVA7zoQUheHPzseWrHsiP5oXyj0e3hfJJx9bxZs5eieD4HwnIY7lqMY4DLuH0lD~0IgOEMlQ1lkhCwa0WA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+                <div class="text">
+                    <h2>Reach More Customers</h2>
+                    <p>LEARN HOW</p>
+                </div>
+            </div>
+        </div>
+        <div class="sec4">
+            <div class="pic-sec4">
+                <div class="section">
+                    <img src="https://s3-alpha-sig.figma.com/img/d562/956e/bdd21e9da94beaeeb6dd4fed495b9c1c?Expires=1694390400&Signature=jgfumhhuhPSQmFaQ9CcXgs6cIrKvaFc8Dkw-kW3ggDsWG4Q8-ttDX4GEcgBhUQXqR6N906HBI1qzAa-tCW4XlX9JFj7qFUFyYoMdKHVmvoAz3Jmsn4qrjkZvkSENmQ4rTb9YM2nQbA1tIFuOA-hvaixoDlemhfgR5dPx8dp83KIsDOo6oo~PCEh9f3bqVg97Gj~17fnl2SFq72UD7C~4XMjWj5WFY4ei68OGf1rFed7cy2xnMLjOymrQSAhQ6JfrW4w9W2NVXpYndVBK-dFG5ffi2STkGFiAMlWYJ-xmkgCUAvqihxYg98r9deEkS5wjD8swDglEp1F8lpHeCN4T-g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                    <div class="case-study">
+                        <p class="name">Frankie</p>
+                        <p class="time">Member since 2016</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="https://s3-alpha-sig.figma.com/img/f17e/a75f/61efa0e5af309c0ec33c3593082563c4?Expires=1694390400&Signature=hF-LcPNJJUtLGrAPsE~kYAgCWwpNuCMgmq8fgM0Te6vKRb2wreLkfSPh6pcRKftYuMF~d0tfq4L0AjkqSi5zUpGw4YPewIr4qpAdIHxIJL3kSUh8Jil0I3250MComYk2CMXtCAG0uaYlfYb9MCyGFoui61jqoJWpN2peE-PQrKsw-IguL0aklt2XNluHDQCEXcDh37bYoauUC5lQcfqj2XSln7bqhNwUN7-~xTwtVVquOyFvPMqxDJpv2EsgAGYtesWuLqoqkU90TnqkfSYn6osTeJ9PU7ETU524VNbEq4a4E2k39MUWLzYh5gUS0Xb7QkYym~GI0OvAQejOSG5ibQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                    <div class="case-study">
+                        <p class="name">Camile</p>
+                        <p class="time">Member since 2016</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <img src="https://s3-alpha-sig.figma.com/img/4ed3/d39d/34577e3c8e8d36f757b75d76debb2881?Expires=1694390400&Signature=cm5o~O~LGXwbsex38tqJxPeBAHjMoRjXyTfY5mt7~XE~nyXaUbqk~MpqR5UDchby6PcLuRV0Pi3IDsi1od5NVYjS3LApET0C3wKxCkUFgJQpUHUN4VZJxN0yVQVVHPXzqZcIWgU1NzIZQ-dEiht6eTQb-H0m5wB-BStcPs3mqBfbgaXDaiAcGQ4oAcXtOFb5e98P4q3JvwI2KXKcmVYp4Uh7eKgpx56svGtre~uI44tcp-h82o1mUMHkWKASXtNZnzaXFYIblPmFsiEo1YJ-L1STO~Y9~uEOshpc55usATez5imn28lRHFzUMQO83uWLY24OzWgB3N0G7JuM94JETQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="">
+                    <div class="case-study">
+                        <p class="name">Elayne</p>
+                        <p class="time">Member since 2018</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-sec4">
+                <div class="input-text">
+                    <p>Learn how others are reaching their audience easier than ever before.</p>
+                </div>
+                <div class="register">
+                    <div class="email">
+                        <input id="email-info" class="email-input" placeholder="Enter your email" type="text" />
+                    </div>
+                    <p>JOIN OUR LIST</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logo">
+                <div class="logo-pic">
+                    <img src="https://s3-alpha-sig.figma.com/img/b561/7758/53b16e9c9138f867a828189389cfc8e7?Expires=1694390400&Signature=VgvQJEBOfP7cF8KkjWM3vcpB5wkpyC1pR4IalyW6hXYXYbJO3zhWkYf6Tj9hOt8Jn4gndhar~cgaCmR57gK775qsgWJQEGLxZV6Mhv6lLao52hC1aPV7p6lW0zwi8HxIoUdpY0mgTDd-yIDB2gur3qmVkumF5wMq66RkpADSRk7fIsPbuNbcAv6Rnp9tJ5h~PaU2-Jck4M0uECOdQcnE4y8dkZe6NVlkIjuzYw0dNlxwSq9Fu2UmZ19CiiRA3CJlTSJXKD4mVN1lfSfMQes8loxsc9mdjqyuXyezvoxlKkhWNtVYzGpSKtesouPT7Kq2yHn5jkUK12LQP8-aoQjDJw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt="error">
+                </div>
+                <p>NinjaMail</p>
+            </div>
+            <div class="footer-links">
+                <div class="column">
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Services</p>
+                    <p>Partners</p>
+                </div>
+                <div class="column">
+                    <p>About Us</p>
+                    <p>Tutorials</p>
+                    <p>Resources</p>
+                    <p>Help Center</p>
+                    <p>Templates</p>
+                    <p>CaseStudies</p>
+                </div>
+                <div class="column">
+                    <p>Medium</p>
+                    <p>Twitter</p>
+                    <p>Facebook</p>
+                    <p>Instagram</p>
+                    <p>LinkedIn</p>
+                </div>
+                <div class="column">
+                    <p>ContactUs</p>
+                    <p>Slack</p>
+                    <p>Jobs</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <p class="ninjaMail">NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All rights reserved.</p>
+            <div class="links2">
+                <p>Terms & Conditions</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

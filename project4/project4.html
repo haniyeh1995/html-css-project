@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project4</title>
+    <style>
+        * {
+            direction: ltr;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+
+        .container {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 902px;
+            justify-content: center;
+            align-items: center;
+            background: var(--background-dark, #2F1893);
+
+        }
+
+        .container img {
+            position: relative;
+            display: block;
+            opacity: 0.6;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            width: 100%;
+            height: 902px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .info {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .title {
+            color: #FFF;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            letter-spacing: -0.4px;
+            margin-bottom: revert;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            width: 570px;
+            margin: auto;
+            height: 590px;
+            flex-shrink: 0;
+
+        }
+
+        .form-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 570px;
+            height: 46px;
+            flex-shrink: 0;
+            border-bottom: 2px solid #EBEAED;
+            padding: 20px 20px;
+            margin-top: -130px;
+
+        }
+
+
+
+        .form-first-title {
+            width: 320px;
+            height: 46px;
+            color: #1E0E62;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 2px solid #1E0E62;
+
+
+        }
+
+        .form-second-title {
+            width: 285px;
+            height: 46px;
+            color: rgba(21, 20, 57, 0.40);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .firstname-form,
+        .lastname-form,
+        .cardnumber-form,
+        .CVV-form,
+        .EXP-DATE-form,
+        .Country-form {
+            position: relative;
+            display: inline-block;
+        }
+
+        .firstname-label,
+        .lastnamename-label,
+        .cardnumber-label,
+        .CVV-label,
+        .EXP-DATE-label,
+        .Country-label {
+            color: #1E0E62;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: absolute;
+            background-color: none;
+            margin: -30px 0px 0px -1px;
+            font-family: 'DM Sans', sans-serif;
+
+        }
+
+        .firstname-input,
+        .lastnamename-input,
+        .cardnumber-input,
+        .CVV-input,
+        .EXP-DATE-input,
+        .Country-input {
+            border-radius: 100px;
+            border: 2px solid var(--colors-grey, #EBEAED);
+            color: var(--colors-text, rgba(21, 20, 57, 0.40));
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            height: 40px;
+            flex-shrink: 0;
+            padding: 20px;
+        }
+
+        .firstname-input,
+        .lastnamename-input,
+        .EXP-DATE-input,
+        .Country-input {
+            width: 200px;
+        }
+
+        .cardnumber-input {
+            width: 300px;
+
+        }
+
+        .CVV-input {
+            width: 100px;
+        }
+
+       
+
+        .button-purchase {
+            background-color: #25DAC5;
+            color: white;
+            width: 430px;
+            height: 46px;
+            border: none;
+            padding: 10px;
+            margin: 46px auto -93px auto;
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+        }
+
+         
+
+        .form-style {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin-top: 57px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://www.figma.com/file/vyQuk9eWWPV1NCwjUjUj3g/image/f39830703b821a958dc64de1473af8b435953794"
+            alt="error">
+        <div class="info">
+            <h3 class="title">Checkout</h3>
+            <div class="form">
+                <div class="form-title">
+                    <p class="form-first-title">Credit Card</p>
+                    <p class="form-second-title">PayPal</p>
+                </div>
+                
+                <div class="form-style">
+                    <div class="firstname-form">
+                        <label for="firstname" class="firstname-label">FIRST NAME</label>
+                        <input id="firstname" class="firstname-input" placeholder="First name" type="text" />
+                    </div>
+                    <div class="lastname-form">
+                        <label for="lastname" class="lastnamename-label">LAST NAME</label>
+                        <input id="lastname" class="lastnamename-input" placeholder="last name" type="text" />
+                    </div>
+                </div>
+                <div class="form-style">
+                    <div class="cardnumber-form">
+                        <label for="cardnumber" class="cardnumber-label">Card Number</label>
+                        <input id="cardnumber" class="cardnumber-input" type="number" />
+                    </div>
+                    <div class="CVV-form">
+                        <label for="CVV" class="CVV-label">CVV</label>
+                        <input id="CVV" class="CVV-input" type="number" />
+                    </div>
+                </div>
+                <div class="form-style">
+                    <div class="EXP-DATE-form">
+                        <label for="EXP-DATE" class="EXP-DATE-label">EXP DATE</label>
+                        <input id="EXP-DATE" class="EXP-DATE-input" placeholder="MM/YYYY" type="number" />
+                    </div>
+                    <div class="Country-form">
+                        <label for="Country" class="Country-label">Country</label>
+                        <input id="Country" class="Country-input" type="text" />
+                    </div>
+                </div>
+                <div>
+                    <button class="button-purchase">Purchase</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
